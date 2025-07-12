@@ -1,45 +1,39 @@
-import java.util.Scanner;
+import java.util.*;
 
-class RightAlignedDecreasingPattern {
+class Pattern10 {
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter the input number (n): ");
-        int n = sc.nextInt();
-        sc.close();
+        System.out.print("Enter No. of Rows : ");
+        int num = sc.nextInt();
+       
+	int Length = (num * 2) - 1;
 
-        // Calculate the maximum length of the full row
-        // For n=3, "C B A" has length 5
-        // For n=4, "D C B A" has length 7
-        // Each character + a space, except the last one
-        int maxLength = (n * 2) - 1;
+        
+        for (int i = 0; i < num; i++) {
+            StringBuilder Row = new StringBuilder();
 
-        // Loop through each row
-        for (int i = 0; i < n; i++) {
-            StringBuilder currentRow = new StringBuilder();
-
-            // Build the string for the current row
-            // The starting character for the row is 'A' + (n - 1)
-            // The loop goes from the starting character down to 'A' + i
-            for (int j = n - 1; j >= i; j--) {
+          
+            for (int j = num - 1; j >= i; j--) {
                 char ch = (char) ('A' + j);
-                currentRow.append(ch);
-                if (j > i) { // Add space after character, but not after the last one
-                    currentRow.append(" ");
+                Row.append(ch);
+                if (j > i) { 
+                    Row.append(" ");
                 }
             }
 
-            // Calculate leading spaces for right alignment
-            int leadingSpaces = maxLength - currentRow.length();
+         
+            int spaces = Length - Row.length();
 
-            // Print leading spaces
-            for (int k = 0; k < leadingSpaces; k++) {
+          
+            for (int k = 0; k < spaces; k++) {
                 System.out.print(" ");
             }
 
-            // Print the current row string
-            System.out.println(currentRow.toString());
+            
+            System.out.println(Row.toString());
         }
-    }
+	sc.close();
+        }
 }
