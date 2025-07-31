@@ -1,0 +1,36 @@
+class BCCI {
+
+	int x =10;
+	BCCI(){
+	System.out.println("IN BCCI Constructor");
+	}
+	void rulesBCCI() {
+	
+		System.out.println("Rules By BCCI");
+	}
+}
+class IPL extends BCCI {
+
+	int y=20;
+	IPL(){
+	
+		System.out.println("In IPL Constructor");
+	}
+	void rulesIPL(){
+	
+		System.out.println("Rules by IPL");
+	}
+}
+class Match {
+
+	public static void main(String[] args){
+	
+		IPL ipl2025 = new IPL();
+	        ipl2025.rulesIPL(); // rules by IPL
+		ipl2025.rulesBCCI();  // rules by BCCI
+
+		 BCCI obj2025 = new BCCI();
+                //obj2025.rulesIPL(); // rules by IPL
+                obj2025.rulesBCCI();  // rules by BCCI
+	}
+}
