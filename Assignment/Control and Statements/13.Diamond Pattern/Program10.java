@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class NumberC1 {
+class CharABC {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter Number of Rows: ");
@@ -8,11 +8,11 @@ class NumberC1 {
         int totalRows = num * 2 - 1;
 
         for (int i = 1; i <= totalRows; i++) {
-            int rowMax;
-	    if(i <= num){
-              rowMax =i;
+            int rowMax ;
+	    if(i<= num){
+	      rowMax =i;
 	    }else{
-	       rowMax =totalRows -i+1;
+	      rowMax = totalRows -i+1;
 	    }
             int spaces = Math.abs(num - rowMax);
 
@@ -22,12 +22,15 @@ class NumberC1 {
 
             
             for (int j = rowMax; j >= 1; j--) {
-                System.out.print(j + " ");
+                char ch =(char)('A'+num-j);
+		System.out.print(ch + " ");
             }
 
            
             for (int j = 2; j <= rowMax; j++) {
-                System.out.print(j + " ");
+                
+	       char ch =(char)('A'+num-j);
+	       System.out.print(ch + " ");
             }
 
             System.out.println();
