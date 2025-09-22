@@ -1,19 +1,24 @@
 
 import java.util.*;
 
-class FightTicket{
+class Ticket{
 
 	int ticketNo;
 	String passengerName;
 	String seatClass;
 	double base;
 
-	FightTicket(int ticketNo,String passengerName,String seatClass,double base){
+	Ticket(int ticketNo,String passengerName,String seatClass,double base){
 	this.ticketNo = ticketNo;
 	this.passengerName = passengerName;
 	this.seatClass = seatClass;
 	this.base= base;
 
+	}
+}
+class FightTicket extends Ticket{
+	FightTicket(int ticketNo,String passengerName,String seatClass,double base){
+		super(ticketNo,passengerName,seatClass,base);
 	}
 	void calculateBill(){
 	
