@@ -1,0 +1,15 @@
+// Code - 2
+// String - Command Line
+
+class StringDemo {
+
+        public static void main(String[] args) {
+
+		
+		for(int i =0;i<args.length;i++) {
+		
+			System.out.println(args[i]);
+		}
+                
+        }
+}
