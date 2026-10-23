@@ -7,7 +7,8 @@ class Demo {
 
 	public static void main(String[] args) throws IOException {
 		
-		File fObj = new File("Java.txt");
+		File fObj = new File("Java.txt"); // Create Object
+		fObj.createNewFile();  // create File
 		File fObj1 = new File("Incubutors.txt");
 			
 		System.out.println(fObj.isDirectory()); //f
